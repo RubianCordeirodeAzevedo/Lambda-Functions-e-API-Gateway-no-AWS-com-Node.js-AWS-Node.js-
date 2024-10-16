@@ -1,0 +1,28 @@
+service: url-shortener
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+functions:
+  shortUrl:
+    handler: src/handler.shortUrl
+    events:
+      - http:
+          path: shorturl
+          method: post
+
+resources:
+  Resources:
+    UrlShortenerDynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: UrlShortener
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST

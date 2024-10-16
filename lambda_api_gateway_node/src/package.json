@@ -1,0 +1,7 @@
+{
+  "name": "lambda-url-shortener",
+  "version": "1.0.0",
+  "description": "A simple URL shortener using AWS Lambda and API Gateway",
+  "main": "handler.js",
+  "dependencies": {}
+}
