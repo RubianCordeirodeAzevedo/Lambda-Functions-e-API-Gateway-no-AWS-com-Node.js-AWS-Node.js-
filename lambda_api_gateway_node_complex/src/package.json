@@ -1,0 +1,11 @@
+{
+  "name": "lambda-url-shortener-complex",
+  "version": "1.0.0",
+  "description": "A complex URL shortener using AWS Lambda and API Gateway with DynamoDB and JWT authentication",
+  "main": "handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.953.0",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^8.3.2"
+  }
+}
